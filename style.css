@@ -182,6 +182,7 @@ hr{
 .row {
     display: flex;
     background-color: white;
+    margin-top: 25px;
 }
   
 .column {
@@ -190,7 +191,7 @@ hr{
     height: 12px;
 }
 
-.row .column p{
+.row .column button {
     font-size: 16px;
     background-color: white;
     padding-top: 30px;
@@ -198,32 +199,94 @@ hr{
     border-bottom: 1px solid #000000;
 }
 
-.hodl{
+.r{
     background-color: white;
 }
 
-.hodl .img {
-    flex: 25%;
+.c {
+    float: left;
+    width: 33.33%;
     background-color: white;
-    margin-top: 85px;
-
-}
-
-.hodl .img img {
-    height: 35px;
-    color: white;
-    background-color: white;
-    padding: 3px;
-    border-radius: 250px;
-    border: 1px solid rgba(255, 0, 0, 0.2);
-    box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
-}
-
-
-
-
+  }
   
+  /* Clear floats after the columns */
+  .r:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
+  .r .c{
+      margin-top: 15px;
+  }
+
+  .r .c:nth-child(1){
+    float: left;
+    width: 5.33%;
+
+  }  
+
+  .r .c:nth-child(2){
+    float: left;
+    width: 58.33%;
+
+  }  
+
+
+  .r .c img{
+      height: 30px;
+      border: 1px solid wheat;
+      border-radius: 50%;
+      margin-top: 10px;
+  }
+
+    .r .c ul li{
+      background-color: white;
+      font-size: 16px;
+      list-style: none;
+      align-items: left;
+  }
+
+  .r .c ul li:nth-child(1){
+      font-weight: 500;
+  }
+
+  .r .c ul li:nth-child(2){
+      opacity: 80%;
+
+  }
+
+  .r .c:nth-child(3) img{
+    float: right;
+    background-color: white ;
+    border: none;
+    height: 19px;
+    text-align: right;
+    opacity: 80%;
+  }
+
+  .deets{
+    background-color: white;
+  }
+
+  .deets p:nth-child(1){
+      font-size: 13px;
+      padding: 0;
+      margin: 0
+
+  }
+
+  .deets p:nth-child(2) a{
+    color:    rgba(0, 0, 255, 0.719);
+    font-size: 14px;
+    margin-top: -100px;
+  }
+
+  .needhelp p{
+      margin-top: 55px;
+      font-size: 16px;
+  }
+  
 
 
 @media screen and (max-width: 480px) {
@@ -232,6 +295,7 @@ hr{
         padding: 0;
         box-sizing: border-box;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 480px;
     }
     
 
@@ -239,14 +303,14 @@ hr{
         background: whitesmoke;
         color: #000;
         overflow: hidden;
-        height: 72px;
+        height: 52px;
         width: 100%;
         justify-content: center;
       }
 
       #navbar .logo img{
-        height: 43px;
-        width: 60px;
+        height: 33px;
+        width: 45px;
         margin-top: 5px;
         margin-left: -190px;
         
@@ -254,6 +318,7 @@ hr{
 
     #mob{
         display: inline-block;
+        
     }
 
     #web{
@@ -261,20 +326,20 @@ hr{
     }
 
     .container{
-        height: 600px;
+        height: 480px;
         background-color: white;
-        width: 390px;
+        width: 380px;
         top: 0px;
     }
     .container .account{
         margin-left: 0px;
         margin-right: 0px;
-    
+        
     }
 
     .container .account h4{
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
         padding-top: 10px; 
     }
 
@@ -299,6 +364,15 @@ hr{
     }
 
     
+    .eth h4{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: white;
+        text-align: center;
+        padding-top: 20px;
+        font-weight: 500;
+        font-size: 35px;
+    }
+    
     .eth p{
         opacity: 70%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -306,13 +380,88 @@ hr{
     }
 
     .exc {
-        display: flex;
-        margin-left: 85px;
+        display: none;
+    }
+    
+    .icons {
+        flex: 33.33%;
         background-color: white;
     }
     
     .icons img{
-        margin: 15px;
+        height: 52px;
+        width: 52px;
+        padding: 15px;
+        margin: 0   ;
+        background-color: rgba(66, 66, 114, 0.63);
+        cursor: pointer;
+        left: 254px;
+    }
+
+
+    .icons p{
+        margin: 10px;
+        color: blueviolet;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+
+
+
+    .deets{
+        background-color: white;
+        max-width: 390px;
+      }
+    
+    .deets p:nth-child(1){
+          font-size: 13px;
+          padding: 0;
+          margin: 0
+    
     }
     
+    .deets p:nth-child(2) a{
+        color:    rgba(0, 0, 255, 0.719);
+        font-size: 14px;
+        margin-top: -100px;
+    }
+    
+    .needhelp p{
+        max-width: 390px;
+        margin-top: 55px;
+        font-size: 16px;
+    }
+
+    .exc:after {
+        display: none;
+    }
+    
+      /* Clear floats after the columns */
+  .r:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .r .c{
+      margin-top: 15px;
+  }
+
+  .r .c:nth-child(1){
+    float: left;
+    width: 15.33%;
+
+  }  
+
+  .r .c:nth-child(2){
+    float: left;
+    width: 48.33%;
+
+  }  
+
+
+
+    
+
 }
